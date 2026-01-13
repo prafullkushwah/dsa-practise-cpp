@@ -2,11 +2,15 @@
 #include<vector>
 using namespace std;
 int knapsackRec(vector<int> val , vector<int> wt ,int W , int n){
+if(n==0 || W==0){
+        return 0 ;
+    }
     int itemWt = wt[n-1] ;
     int itemVal = val[n-1] ;
     if(itemWt<=W){
         int ans1 = knapsackRec(val,wt,W-itemWt,n-1)+itemVal ;
         int ans2 =  knapsackRec(val,wt,W,n-1) ;
+     return max(ans1, ans2);
     }
     return knapsackRec(val,wt,W,n-1) ;
 }
