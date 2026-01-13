@@ -1,0 +1,15 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int countWaysmem(int n){
+    if(n==0||n==1){
+        return 1 ;
+    }
+    return countWaysmem(n-1)+countWaysmem(n-2) ;
+}
+int main(){
+    int n=5 ;
+    vector<int> dp(n+1,-1) ;
+    cout<<"count ways = "<<countWaysmem(n)<<endl ;
+    return 0 ;
+}
