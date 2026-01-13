@@ -16,6 +16,6 @@ int main(){
     vector<int> wt = {2,5,1,3,4} ;
     int W = 7 ;
     int n = 5 ;
-    
+      cout<<"max value = "<<knapsackRec(val,wt,W,n)<<endl ;
     return 0 ;
 }
